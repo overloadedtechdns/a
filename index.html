@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officina Tecnologica</title>
+    <style>
+        /* Palette mistica */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #f5f5f5;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #a29bfe;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #81ecec;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #0f3460;
+            color: #81ecec;
+        }
+
+        .chaos-button {
+            margin: 30px 10px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: #fff;
+            background: #6c5ce7;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #6c5ce7;
+            transition: all 0.3s ease;
+        }
+
+        .chaos-button:hover {
+            background: #a29bfe;
+            box-shadow: 0 0 25px #a29bfe;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #6c5ce7, 0 0 20px #6c5ce7, 0 0 30px #a29bfe, 0 0 40px #a29bfe;
+            }
+            to {
+                text-shadow: 0 0 20px #6c5ce7, 0 0 30px #a29bfe, 0 0 40px #a29bfe, 0 0 50px #81ecec;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Benvenuti nell'Officina Tecnologica</h1>
+    <h2>Caos organizzato? Ci proviamo...</h2>
+    <p>
+        Coding, stampa 3D su Bambu Lab, esplorazioni hardware retrò, saldature improbabili, e... puro divertimento!<br>
+        Qui non promettiamo ordine, ma impariamo, creiamo, e a volte (spesso) mandiamo tutto in fumo. Letteralmente.
+    </p>
+
+    <button class="chaos-button" onclick="generateChaos()">Genera Caos</button>
+
+    <footer>
+        <p>Officina Tecnologica - Sede legale: Via Wolkenstein 6, 39100 Bolzano-Bozen</p>
+        <p>Contatti: <a href="mailto:info@canalescuola.it">info@canalescuola.it</a> | <a href="tel:+390471979580">+39 0471 979580</a></p>
+        <p>Powered by Canalescuola Coop. Soc. ONLUS</p>
+    </footer>
+
+    <script>
+        // Script per animazioni caotiche
+        function generateChaos() {
+            const colors = ['#a29bfe', '#6c5ce7', '#81ecec', '#ffeaa7', '#fab1a0'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = `linear-gradient(135deg, ${randomColor}, #1a1a2e)`;
+
+            const newHeading = document.createElement('h3');
+            newHeading.textContent = "Caos generato! Qualcuno chiami l'assistenza.";
+            newHeading.style.color = randomColor;
+            newHeading.style.animation = 'glow 2s ease-in-out infinite alternate';
+            document.body.appendChild(newHeading);
+        }
+    </script>
+</body>
+</html>
